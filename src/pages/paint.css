@@ -1,0 +1,6 @@
+.paint{
+    height: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(to right, rgba(85, 78, 26, 0.497) , rgb(55, 0, 255));
+    background-repeat: repeat;
+}

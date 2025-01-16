@@ -1,0 +1,85 @@
+.main-canvas{
+    display: inline-block;
+    width: 800px;
+    height: 500px;
+    background-image: linear-gradient(to right, rgba(195, 180, 50, 0.497) , rgba(13, 0, 255, 0.747));
+    border: solid 1px grey;
+    margin-right: 150px;
+    margin-left: 20px;
+}
+
+.tools{
+    display: inline-block;
+    width: 100px;
+    height: 600px;
+    /*background-image: linear-gradient(to right, rgba(172, 158, 34, 0.497) , rgba(59, 117, 233, 0.747));*/
+    background-image: linear-gradient(to right, rgba(172, 158, 34, 0.497) , rgba(180, 182, 186, 0.747));
+    border: solid 1px grey;
+    text-align: center;
+    margin-top: 5px;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.tools p{
+    margin: 10px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.tools input{
+    
+    display: flex;
+    width: 100%;
+    height: 35px;
+    background-color: rgb(169, 169, 175);
+}
+
+.tools select{
+    width: 100%;
+    height: 35px;
+    background-color: rgb(172, 172, 185);
+    font-size: medium;
+    font-weight: bold;
+    color:rgb(54, 54, 55);
+}
+
+.tools button{
+    background-color: rgb(140, 140, 128);
+}
+
+.paint-container{
+    display: flex;
+}
+
+.paint-container h2{
+
+    text-align: center;
+    margin-left: -120px;
+}
+
+.paint-container h3{
+
+    text-align: center;
+}
+
+.point {
+
+    display: inline-block;
+    position: absolute;
+    border-radius: 10;
+    font-size: 30px
+}
+
+.my-canvas {
+
+    display: inline-block;
+   /* width: 800px;
+    height: 500px;
+    background-image: linear-gradient(to right, rgba(235, 234, 223, 0.497) , rgba(13, 0, 255, 0.747));*/
+    background-color: rgba(235, 216, 193, 0.671);
+    border: solid 1px grey;
+    margin-right: 150px;
+    margin-left: 20px;
+    border-radius: 30px;
+}
