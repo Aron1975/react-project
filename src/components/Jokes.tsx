@@ -1,18 +1,19 @@
 import { useState, useEffect } from "react";
 
-const URL = "https://www.yomama-jokes.com/api/v1/jokes/stupid/";
-interface Joke {
-    joke: string;
-    category: string;
+const URL = "https://official-joke-api.appspot.com/jokes/random";
+
+type Joke = {
+    setup: string;
+    punchline: string;
 }
 
 function Jokes() {
 
   const [jokes, setJokes] = useState<Joke[]>([]);
-  
+  const [aJoke, setAJoke] = useState<Joke>({setup:'', punchline:''});
 
   useEffect(() => {
-    fetch("https://www.yomama-jokes.com/api/v1/jokes/stupid/", {
+    fetch(URL, {
       method: "GET",
       headers: {
         "Accept": "application.json",
@@ -20,26 +21,22 @@ function Jokes() {
     })
       .then((response) => response.json())
       .then((data) => {
-        setJokes(data);
-       // console.log(data);
+        setAJoke({setup:data.setup,punchline:data.punchline});
+        console.log(data);
       })
       .catch((error) => console.log(error));
-     /* const fetchJokes = async () => {
-        const response = await fetch(`${URL}`);
-        const jokes = (await response.json()) as Joke[];
-        setJokes(jokes);
-      }
-      fetchJokes();*/
   }, []);
+
   return (
     <div>
-      <h2>Jokes of the day:</h2>
+      <h2 style={{textAlign:'center'}}>Joke of the day:</h2>
       <ul>
         {jokes.map((j, index) => (
-            <li key={index}>{j.joke}</li>
+            <li key={index}>{j.setup}</li>
         ))}
       </ul>
-      {/*joke && <p>{joke}</p>*/}
+      <p style={{textAlign:'center', fontSize: '20px'}}>{aJoke.setup}</p>
+      <p style={{textAlign:'center', fontSize: '20px'}}>{aJoke.punchline}</p>
     </div>
   );
 }
