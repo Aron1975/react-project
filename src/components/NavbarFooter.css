@@ -60,3 +60,12 @@ footer{
     width: 98%;
     color: blue;
 }
+
+.AppMain{
+    background-image: linear-gradient(to right, rgba(195, 180, 50, 0.497) , rgba(13, 0, 255, 0.747));
+  }
+
+  .AppMain h1{
+    justify-content: center;
+    text-align: center;
+  }

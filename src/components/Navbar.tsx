@@ -6,7 +6,6 @@ export function Navbar(){
     return(
         <>
             <header>
-           {/* <div className="my-navbar"> */}
                 <Link to="/">
                     <button>Home</button>
                 </Link>
@@ -14,12 +13,11 @@ export function Navbar(){
                     <button>Show Cars</button>
                 </Link>
                 <Link to="/edit-cars">
-                    <button>Edit Cars</button>
+                    <button>Jokes</button>
                 </Link>
                 <Link to="/paint">
                     <button>Paint</button>
                 </Link>
-            {/*</div>*/}
             </header>
         </>
     )

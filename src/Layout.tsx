@@ -2,6 +2,7 @@ import { Navbar } from "./components/Navbar"
 import { Outlet } from "react-router-dom"
 import { Footer } from "./components/Footer"
 import "./components/NavbarFooter.css"
+import "./Layout.css"
 
 export function Layout(){
 

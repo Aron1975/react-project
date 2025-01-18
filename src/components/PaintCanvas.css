@@ -9,10 +9,10 @@
 }
 
 .tools{
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     width: 100px;
     height: 600px;
-    /*background-image: linear-gradient(to right, rgba(172, 158, 34, 0.497) , rgba(59, 117, 233, 0.747));*/
     background-image: linear-gradient(to right, rgba(172, 158, 34, 0.497) , rgba(180, 182, 186, 0.747));
     border: solid 1px grey;
     text-align: center;
@@ -45,8 +45,10 @@
 }
 
 .tools button{
+    display: inline;
+    position:relative;
     background-color: rgb(140, 140, 128);
-    margin-top: 90px;
+    margin-top: auto;
 }
 
 .paint-container{
@@ -75,9 +77,6 @@
 .my-canvas {
 
     display: inline-block;
-   /* width: 800px;
-    height: 500px;
-    background-image: linear-gradient(to right, rgba(235, 234, 223, 0.497) , rgba(13, 0, 255, 0.747));*/
     background-color: rgb(235, 216, 193);
     border: solid 1px grey;
     margin-right: 150px;

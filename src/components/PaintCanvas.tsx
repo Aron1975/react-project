@@ -15,7 +15,6 @@ export function PaintCanvas(){
     const [strokeWidth, setStrokeWidth] = useState(2);
 
     const coordCalibr = {x:19,y:116};
-    //const elementRef = useRef(null);
     const elementRef = useRef<HTMLCanvasElement | null>(null);
     const [points, setPoints] = useState<Point[]>([]);
     const [startPoint, setStartPoint] = useState<Point>({x:0,y:0});
@@ -117,11 +116,10 @@ export function PaintCanvas(){
                     <p>Fill color:</p>
                     <input type="color" value={selectedFillColor} placeholder="{selectedFillColor}" onChange={(e) => setSelectedFillColor(e.target.value)}/>
                     <p id="p-fill">Fill:
-                    <input type="checkbox" name="fill" defaultChecked={false} onChange={(e) => handleCheckboxChange(e)}/>
+                        <input type="checkbox" name="fill" defaultChecked={false} onChange={() => handleCheckboxChange()}/>
                     </p>
                     <p>Size:{strokeWidth}
-                    <input type="range" min={1} max={30} value={strokeWidth} onChange={(e) => {setStrokeWidth(parseInt(e.target.value))}}/>
-                    
+                        <input type="range" min={1} max={30} value={strokeWidth} onChange={(e) => {setStrokeWidth(parseInt(e.target.value))}}/>
                     </p>
                     <button onClick={cleanCanvas}>Clean Canvas</button>
                 </div>
