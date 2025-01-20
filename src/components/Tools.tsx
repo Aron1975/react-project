@@ -1,14 +1,14 @@
 import "./PaintCanvas.css"
 import { useState } from "react";
 
-export function Tools( {handleDataFromChild} ){
+export function Tools(){
 
     const[childData, setChildData] = useState("");
 
-    const sendData = (e) => {
+   /* const sendData = (e) => {
         e.preventDefault();
         handleDataFromChild(childData);
-      };
+      };*/
 
     //const [selectedShape, setSelectedShape] = useState('Line');
 

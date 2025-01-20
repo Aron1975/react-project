@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { GET } from './Fetch.tsx';
+import { useState} from "react";
+//import { GET } from './Fetch.tsx';
 import axios from "axios";
 
 const URL = "https://official-joke-api.appspot.com/jokes/random";
@@ -11,7 +11,7 @@ type Joke = {
 
 function Jokes() {
 
-  const [jokes, setJokes] = useState<Joke[]>([]);
+  //const [jokes, setJokes] = useState<Joke[]>([]);
   const [aJoke, setAJoke] = useState<Joke>({setup:'', punchline:''});
 
   /*
@@ -49,11 +49,11 @@ function Jokes() {
   return (
     <div>
       <h2 style={{textAlign:'center'}}>Get a Joke!</h2>
-      <ul>
+     {/*} <ul>
         {jokes.map((j, index) => (
             <li key={index}>{j.setup}</li>
         ))}
-      </ul>
+      </ul>*/}
       <br /><br />
       <p style={{textAlign:'center', fontSize: '20px'}}>{aJoke.setup}</p>
       <p style={{textAlign:'center', fontSize: '20px', fontWeight: 'bold'}}>{aJoke.punchline}</p>

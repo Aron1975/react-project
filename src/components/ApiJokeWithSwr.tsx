@@ -1,4 +1,4 @@
-import useSWR from 'swr'
+/*import useSWR from 'swr'
 
 
 
@@ -36,4 +36,4 @@ export function ApiJokeWithSwr(props: { message: string; }){
     );
         
 
-}
+}*/

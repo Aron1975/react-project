@@ -12,9 +12,9 @@ function CarList(props: Props){
     
     const [selectedCar, setSelectedCar] = useState(-1);
     const getCars = () => {return props.items.length === 0 ? <p>No items found</p> : null}
-    const getCars2 = (i: number) => {if(i===1) return <p>No items found</p>
+  /*  const getCars2 = (i: number) => {if(i===1) return <p>No items found</p>
         else if(i===2) return <p>Something went wrong</p>
-        else return null};
+        else return null};*/
 
     const handleClick = (event: MouseEvent) => console.log(event, " ", selectedCar, event.currentTarget.innerHTML, event.currentTarget.textContent)
 

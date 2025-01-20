@@ -1,4 +1,3 @@
-import MovingDot from "../components/MovingDot";
 import {PaintCanvas} from "../components/PaintCanvas";
 import './paint.css'
 
