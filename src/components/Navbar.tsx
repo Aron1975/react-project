@@ -18,6 +18,9 @@ export function Navbar(){
                 <Link to="/paint">
                     <button>Paint</button>
                 </Link>
+                <Link to="/charts">
+                    <button>Grafer</button>
+                </Link>
             </header>
         </>
     )

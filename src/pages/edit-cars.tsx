@@ -1,19 +1,20 @@
-//import { Suspense } from "react";
+import { Suspense } from "react";
 import Jokes from "../components/Jokes";
-//import {ApiJokeWithSwr} from "../components/ApiJokeWithSwr";
+import {ApiJokeWithSwr} from "../components/ApiJokeWithSwr";
+import { Loader } from "../components/Loader";
 
 function EditCars(){
 
-    // const url = "https://official-joke-api.appspot.com/jokes/random";
+    const url = "https://official-joke-api.appspot.com/jokes/random";
 
     return (
-        <div>
-        <br /><br /><br />
-        {/*}  <Suspense fallback={<h2>Loading...</h2>}>
-               <ApiJokeWithSwr message={url}/>
-          </Suspense>  */}
+     <div>
+          <br /><br /><br />
+          <Suspense fallback={<Loader/>}>
+               <ApiJokeWithSwr url={url}/>
+          </Suspense>
           <Jokes/>
-        </div>
+     </div>
     )
     
 }

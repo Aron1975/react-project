@@ -14,7 +14,7 @@ export function PaintCanvas(){
     const [fillChecked, setFillChecked] = useState(false);
     const [strokeWidth, setStrokeWidth] = useState(2);
 
-    const coordCalibr = {x:19,y:116};
+    let coordCalibr = {x:19,y:116};
     const elementRef = useRef<HTMLCanvasElement | null>(null);
     const [points, setPoints] = useState<Point[]>([]);
     const [startPoint, setStartPoint] = useState<Point>({x:0,y:0});
@@ -60,6 +60,7 @@ export function PaintCanvas(){
         if (!canvas) return;
         const rect = canvas.getBoundingClientRect();
         console.log(rect.top + " " + rect.left);
+        coordCalibr = {x:rect.left,y:rect.top};
         const ctx = canvas.getContext("2d");
         if (!ctx) return;
         ctx.beginPath();
