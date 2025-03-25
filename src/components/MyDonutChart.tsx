@@ -7,8 +7,6 @@ import {
   } from 'chart.js';
   import { Doughnut } from 'react-chartjs-2';
   import zoomPlugin from "chartjs-plugin-zoom";
-import { useEffect, useState } from 'react';
-
   
   ChartJS.register(
     ArcElement,

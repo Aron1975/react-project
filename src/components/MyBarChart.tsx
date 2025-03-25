@@ -42,7 +42,7 @@ const MyBarChart = (props:Props) => {
           zoom: {
             pan: {
               enabled: true,
-              mode: 'x',
+              mode: 'x' as const,
             },
             zoom: {
               wheel: {
