@@ -1,5 +1,5 @@
 import DragNdrop from "../components/DragNDrop"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 type User = {
@@ -21,9 +21,11 @@ type Company = {
     orgNumber: string,
     shareCapital: number,
 }
+const baseUrl = 'https://momsbalans-backend.onrender.com';
 
 function Welcome(){
 
+    const url0 = baseUrl + '/api/ping';
     const url = 'http://localhost:8080/new-file';
     const url2 = 'http://localhost:8080/api/auth/register';
     const url3 = 'http://localhost:8080/api/auth/addcompany';
@@ -43,14 +45,6 @@ function Welcome(){
         axios.post(url, formData)
             .then((response) => {console.log(response)})
             .catch((error) => console.error(error));
-
-      /*  const results = await fetch (url,{
-            method: 'POST',
-            body: formData
-        }).then((response => response.json()))
-        .then((data) => {console.log(data); console.log(data.message)})
-        .catch((error) => console.error(error));*/
-        //console.log("Result: " + results.response.message);
     }
 
     const handleSubmit = async (e: any) => {
@@ -118,6 +112,23 @@ function Welcome(){
             .catch((error) => console.error(error));
     
     }
+
+    const ping = async () => {
+        axios.get(url0)
+            .then((response) => {console.log(response)})
+            .catch((error) => console.error(error));
+    
+    }
+
+    useEffect(()=>{
+
+        let interval = setInterval(() => {
+            ping();
+        }, 60000);
+        return () => {
+            clearInterval(interval);
+        };
+    },[]);
     
     return (
         <>
