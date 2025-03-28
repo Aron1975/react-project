@@ -22,6 +22,7 @@ type Company = {
     shareCapital: number,
 }
 const baseUrl = 'https://momsbalans-backend.onrender.com';
+const updateInt = 600000;
 
 function Welcome(){
 
@@ -122,10 +123,10 @@ function Welcome(){
     }
 
     useEffect(()=>{
-
+        console.log("Init update, interval: " + updateInt/60000 + " minutes.");
         let interval = setInterval(() => {
             ping();
-        }, 600000);
+        }, updateInt);
         return () => {
             clearInterval(interval);
         };
@@ -135,13 +136,9 @@ function Welcome(){
         <>
             <br /><br /><br />
             <h1>Welcome to My React page!</h1>
+            <h2>Ping it!</h2>
             <DragNdrop onFilesSelected={setFiles} width="300px" height='400px'/>
             <button onClick={upload}>Upload</button>
-           {/* <ul>
-                {files.map((file, index)=>(
-                    <li key={index}>{file.name}</li>
-                ))}
-            </ul> */}
             <form onSubmit={handleLoginSubmit}>
                 <h3>Logga in</h3>
                 <label>Användarnamn:</label>
