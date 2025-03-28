@@ -114,6 +114,7 @@ function Welcome(){
     }
 
     const ping = async () => {
+        console.log("ping");
         axios.get(url0)
             .then((response) => {console.log(response)})
             .catch((error) => console.error(error));
@@ -124,7 +125,7 @@ function Welcome(){
 
         let interval = setInterval(() => {
             ping();
-        }, 60000);
+        }, 600000);
         return () => {
             clearInterval(interval);
         };
